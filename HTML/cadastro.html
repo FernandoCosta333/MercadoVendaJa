@@ -4,31 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cadastro.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/cadastro.css">
+    <title>Cadastro</title>
 </head>
 <body>
         
      <div class="conteiner2">
         <h1 class="logo">
-        <span class="mercado">Mercado</span><span class="ao">AO</span>
+        <span class="mercado"><a href="./index.html">Mercado</span><span class="ao">AO</a></span>
     </h1>
-    <h6>Entra na tua área de vendedor</h6> 
-        <form>
-            <label class="campo">
-                <input type="text" class="item" placeholder="Nome completo">
-                <input type="text" placeholder="BI">
+    <h6>Cria a tua loja gratuitamente</h6> 
+        <form class="Formulario">
+            <div class="linha">
+                <div>
+                <label>Nome completo</label>
+                <input type="text" class="item" placeholder="João Manuel">
+                </div>
+                <div>
+                <label>Contacto</label>
+                <input type="text" placeholder="+244 9## ### ###">
+                </div>
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" placeholder="o-teu-email@exemplo">
+                </div>
+                <div>
+                <label>Senha</label>
+                <input type="password" placeholder="********">
+                </div>
+                <div>
+                <label>Confirmar senha</label>
+                <input type="password" placeholder="********">
+                </div>
+                <div>
+                <label>Data</label>
                 <input type="date" placeholder="Data de nascimento">
-                <input type="text" placeholder="Província">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Contacto">
-                <input type="password" placeholder="Password">
-                <input type="password" placeholder="Confirmar password">
-            </label>
-            <label
+                </div>
+                <div>
+                <label>Província</label>
+                <input type="text" placeholder="Huambo">
+                </div>
+                <div>
+                <label> BI</label>
+                <input type="text" placeholder="Bilhete de identidade">
+                </div>
+                
+            
         </form>
         <div class="remember">
     <button type="submit"  class="sub">Criar Minha Loja Grátis<a href="#"></a></button>
-    <p>Já tem uma conta?<a href="Login.html">Entrar</a></p>
+    <p>Já tem uma conta?<a href="Login.html"> Entrar </a></p>
     </div>
     </div>
     
