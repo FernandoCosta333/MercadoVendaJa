@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;   
+    background-size: cover;
+    background-position: center;    
+}
+ .conteiner{
+     width: 420px;
+     background-color: rgb(253, 255, 254);
+     border: 2px solid rgba(255, 255, 255, .2);
+     border-radius: 10px;
+     padding: 30px 40px;
+     color: #924747;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+ .mercado{
+    color: rgb(2, 26, 95);
+ }
+ .ao{
+    color: #fd4949;
+ }
+ .conteiner h6{
+    font-size: 12px;
+    text-align: center;
+     color: black; 
+ }
+ .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+ }
+ .input-box input{
+     width: 100%;
+     height: 100%;
+     background-color: transparent;
+     font-size: 16px;
+     color: #fff;
+     border-radius: 15px;
+ }
+ .input-box input::placeholder{
+    text-align: center;
+    color: #130101;
+ }
+ .register{
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+ }
+ .register label input{
+    accent-color: red;
+ }
+.register a{
+    text-decoration: none;
+    color: #501010;
+}
+.register a:hover{
+    text-decoration: underline;
+}
+.login{
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+.login:hover{
+    background-color: transparent;
+    color: #fff;
+    transition: 0.5s;
+}
+.remember{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+.remember a{
+text-decoration: none;
+color: rgb(255, 136, 0);
+}
+.remember a:hover{
+    text-decoration: underline;
+}
