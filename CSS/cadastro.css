@@ -4,7 +4,7 @@
 
 }
 body{
- background-color:rgb(255, 255, 255);
+ background-color:#1A2744;
  display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,4 +74,29 @@ color: rgb(255, 136, 0);
 }
 .remember a:hover{
     text-decoration: underline;
+}
+a{
+    text-decoration: none;
+   color: #1A2744;
+}
+.formulario{
+    display: grid;
+    gap: 20px;
+}
+.linha{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+label{
+    display: block;
+    margin-bottom: 1px;
+    font-weight: bold;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
