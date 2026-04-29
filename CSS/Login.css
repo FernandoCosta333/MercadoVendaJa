@@ -10,7 +10,8 @@ body{
     align-items: center;
     min-height: 100vh;   
     background-size: cover;
-    background-position: center;    
+    background-position: center;  
+    background-color: #1A2744;  
 }
  .conteiner{
      width: 420px;
@@ -90,3 +91,8 @@ color: rgb(255, 136, 0);
 .remember a:hover{
     text-decoration: underline;
 }
+a{
+    text-decoration: none;
+    color: #1A2744;
+}
+
