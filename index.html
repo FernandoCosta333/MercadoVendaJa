@@ -1,0 +1,39 @@
+!<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width, initial-scale=1.0">
+        <title> MercadoVendaJá </title>
+        <style>
+body { font-family: arial; padding: 20px;}
+.produto {border: 1px solid #ccc; padding: 10px 0;}
+        </style>
+    </head>
+    <body>
+        <h1> Produtos do MercadoVendaJá </h1>
+        <div id="lista-produtos"> Carregando </div>
+        <script>
+
+//Busca os dados na API porta 3000
+fetch('http://localhost:3000/produtos')
+.then(res => res.json())
+.then(produtos => {
+    const div=document.getElementById('lista-produtos');
+    div.innerHTML='';
+    produtos.forEach(p => {
+        div.innerHTML += `<div class="produto"> 
+            <h3> ${p.titulo} </h3>
+            <p> ${p.descricao} </p>
+            <strong> ${p.preco} </strong>
+            </div>  `;
+        
+    });
+})
+.catch(erro => {
+    document.getElementById('lista-produtos').innerText ='erro:'+erro;
+
+});
+
+        </script>
+    </body>
+    </html>

@@ -42,7 +42,7 @@ O sistema simula um ambiente real de comércio digital, integrando frontend e ba
 
 ### Backend:
 
-* PHP
+* Node.js + express
 
 ### Base de Dados:
 
@@ -74,7 +74,7 @@ project/
 **Estrutura do Banco:**
 -`categorias`: categorias dos produtos
 -`usuarios`: dados dos clientes
--`produtos`: produtos co fk para usariios e categorias
+-`produtos`: produtos com fk para usariios e categorias
 -`pedidos`: pedidos com fk para usuarios e produtos
 ---
 
