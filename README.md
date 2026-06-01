@@ -1,4 +1,3 @@
- **VendaJá** 
 
 ---
 
@@ -43,7 +42,7 @@ O sistema simula um ambiente real de comércio digital, integrando frontend e ba
 
 ### Backend:
 
-* PHP
+* Node.js + express
 
 ### Base de Dados:
 
@@ -72,10 +71,30 @@ project/
 ├── config/
 ├── database/
 ```
-
+**Estrutura do Banco:**
+-`categorias`: categorias dos produtos
+-`usuarios`: dados dos clientes
+-`produtos`: produtos com fk para usariios e categorias
+-`pedidos`: pedidos com fk para usuarios e produtos
 ---
 
 ## ⚙️ Como Executar o Projeto
+**VendaJá** 
+### API + Banco de Dados 
+**1 Configurar o banco de dados:**
+ Importar 'database/vendaja.sql' no phpMyAdmin para criar o banco  com dados.
+
+**2. Rodar a API:**
+```bash
+cd api
+npm install
+node server.js
+```
+**3.Testar:**
+API rodando em 'http://localhost:3000'
+** Rotas disponíveis:**
+-`GET /`--> Status da API
+-`GET` /produtos--> Lista todos os produtos do banco
 
 ### 🔹 Requisitos:
 
@@ -125,6 +144,15 @@ http://localhost/nome-do-projecto
 3. Produtos são exibidos na loja
 4. Comprador visualiza e entra em contacto
 
+### API + Banco de dados
+**1. Configurar o banco:**
+Importar 'database/vendaja.sql' no phpMyAdmin para criar o banco  com os dados
+
+**2. Rodar a API:**
+```bash
+cd api
+npm install
+node server.js
 ---
 
 ## 📸 Demonstração
