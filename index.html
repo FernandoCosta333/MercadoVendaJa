@@ -1,40 +1,40 @@
 !<!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width, initial-scale=1.0">
         <title> MercadoVendaJá </title>
         <style>
 body { font-family: arial; padding: 20px;}
-.produto {border: 1px solid #ccc; padding: 10px 0;}
+.produto {border: 1px solid #ccc; padding: 10px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+.preco { color: green; font-weight: bold; font-size: 18px;
+
+}
         </style>
     </head>
     <body>
         <h1> Produtos do MercadoVendaJá </h1>
-        <div id="lista-produtos"> Carregando </div>
+
+        <div id="lista-produtos"> Carregando produtos... </div>
+
         <script>
 
 //Busca os dados na API porta 3000
-fetch('http://localhost:3000/produtos')
+
+fetch('produtos')
 .then(res => res.json())
 .then(produtos => {
-    const div=document.getElementById('lista-produtos');
-    div.innerHTML='';
-    produtos.forEach(p => {
-        div.innerHTML += `<div class="produto"> 
+    const div=document.getElementById('lista-produtos'); // Limpa o "carregamento"
+
+div.innerHTML = produtos.map(p => `
+        <div style="border:1px solid #ccc; padding: 10px; margin :10px o"> 
             <h3> ${p.titulo} </h3>
             <p>Cor: ${p.cor || 'N/A'} </p>
-            <strong>${Number(p.preco).toLocaleString('pt-AO',{minimumFractionDigits: 2})} kzs </strong>
-            <br> <br> 
-            <button onclick="adicionarCarrinho(${p.id_p}, '${p.titulo}',${p.preco}) "> Comprar </button> 
-            </div> `;
-        
+            <p>${p.descricao} </p>
+            <p style="color:blue">${p.preco} kzs </p>
+            <button> Comprar </button> 
+            </div>
+             `).join('');
     });
-})
-.catch(erro => {
-    document.getElementById('lista-produtos').innerText ='erro:'+erro;
-
-});
 
         </script>
     </body>
